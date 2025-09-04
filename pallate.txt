@@ -1,6 +1,0 @@
-
---carolina-blue: #74b3ceff;
---blue-munsell: #508991ff;
---prussian-blue: #172a3aff;
---midnight-green: #004346ff;
---mint: #09bc8aff;
