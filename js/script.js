@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   const title = "Hello! I'm Pavan";
-  const subtitle = "I am a DevOps | Cloud Engineer (Fresher)";
+  const subtitle = "I am a Software | Backend Engineer";
   const titleEl = document.getElementById("typed-title");
   const subtitleEl = document.getElementById("typed-subtitle");
 
