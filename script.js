@@ -172,6 +172,40 @@ document.addEventListener("keydown", (e) => {
 });
 
 /* ═══════════════════════════════════════════
+   CONTACT FORM - MAILTO
+═══════════════════════════════════════════ */
+function sendMessage() {
+  const firstName = document
+    .querySelector('input[placeholder="Ravi"]')
+    .value.trim();
+  const lastName = document
+    .querySelector('input[placeholder="Kumar"]')
+    .value.trim();
+  const email = document
+    .querySelector('input[placeholder="ravi@company.com"]')
+    .value.trim();
+  const message = document
+    .querySelector(
+      'textarea[placeholder="Hey Pavan, I\'d love to connect about..."]',
+    )
+    .value.trim();
+
+  if (!firstName && !lastName && !message) {
+    alert("Please fill in your name and message before sending.");
+    return;
+  }
+
+  const subject = encodeURIComponent(
+    `Portfolio Contact from ${firstName} ${lastName}`,
+  );
+  const body = encodeURIComponent(
+    `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`,
+  );
+
+  window.location.href = `mailto:dummidapavan@gmail.com?subject=${subject}&body=${body}`;
+}
+
+/* ═══════════════════════════════════════════
    SCROLL REVEAL
 ═══════════════════════════════════════════ */
 const observer = new IntersectionObserver(
