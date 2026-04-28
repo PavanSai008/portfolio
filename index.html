@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Pavan Sai — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-logo">PS<span>.</span></div>
+  <ul>
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a class="nav-resume" href="https://drive.google.com/file/d/1KYQvsJ-gM0Vu99JlEVRUCk_GOPOpUG6r/view?usp=drive_link" target="_blank">Resume ↗</a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-blob blob1"></div>
+  <div class="hero-blob blob2"></div>
+
+  
+  <h1 class="hero-name">
+    <span class="line">Pavan</span>
+    <span class="line accent">Sai.</span>
+  </h1>
+  <p class="hero-sub">
+    <strong>CS Engineer</strong> building full-stack apps, ML systems, and cloud-native tools.
+    Passionate about turning real problems into working software.
+  </p>
+  <div class="hero-cta">
+    <a class="btn-primary" href="#projects">View Projects</a>
+    <a class="btn-ghost" href="#contact">Get in touch</a>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    scroll to explore
+  </div>
+
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">8.1</div>
+      <div class="stat-label">CGPA</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">160+</div>
+      <div class="stat-label">LeetCode</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">2</div>
+      <div class="stat-label">Internships</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="about-grid reveal">
+    <div class="about-img-wrap">
+      <div class="about-img-frame">
+        <img src="imgs/profile.png" alt="Pavan Sai">
+      </div>
+      <div class="about-badge">
+        <strong>8.1</strong>
+        CGPA · ANU
+      </div>
+    </div>
+    <div class="about-text">
+      <div class="section-eyebrow">about me</div>
+      <h2 class="section-title" style="margin-bottom:28px;">Who I am.</h2>
+      <p>
+        Final-year <strong>Computer Science student</strong> at Acharya Nagarjuna University (2026 batch),
+        driven by a genuine love for building things that work.
+      </p>
+      <p>
+        My work spans <strong>full-stack development</strong>, <strong>machine learning</strong>, and
+        <strong>backend engineering</strong>. I've interned at RINL Visakhapatnam building production
+        document portals, and at OctaNet on backend systems.
+      </p>
+      <p>
+        Outside of code I get into 3D with Blender, scripting with Lua, and anything that blurs the line
+        between engineering and design.
+      </p>
+      <div class="about-chips">
+        <span class="chip">Python</span>
+        <span class="chip">Flask</span>
+        <span class="chip">Docker</span>
+        <span class="chip">TensorFlow</span>
+        <span class="chip">React</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">SQL</span>
+        <span class="chip">Linux</span>
+        <span class="chip">Git</span>
+        <span class="chip">Figma</span>
+        <span class="chip">Blender</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <div class="skills-header reveal">
+    <div>
+      <div class="section-eyebrow">skills</div>
+      <h2 class="section-title" style="margin-bottom:0;">What I work with.</h2>
+    </div>
+    <div class="carousel-controls" style="margin-bottom:0;">
+      <button class="carousel-btn" id="prevBtn">&#8592;</button>
+      <button class="carousel-btn" id="nextBtn">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="carousel-outer reveal reveal-delay-1">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="skill-card">
+        <div class="skill-icon"><img src="images/html.png" alt="HTML CSS" onerror="this.parentElement.innerHTML='🌐'"></div>
+        <div class="skill-name">HTML & CSS</div>
+        <div class="skill-desc">Responsive UIs, landing pages and pixel-perfect layouts for real projects.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><img src="images/js.png" alt="JavaScript" onerror="this.parentElement.innerHTML='⚡'"></div>
+        <div class="skill-name">JavaScript</div>
+        <div class="skill-desc">Interactive apps, animations, dynamic UI logic and API integrations.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><img src="images/python.png" alt="Python" onerror="this.parentElement.innerHTML='🐍'"></div>
+        <div class="skill-name">Python</div>
+        <div class="skill-desc">Automation, data pipelines, ML prototyping and backend scripting.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🤖</div>
+        <div class="skill-name">Machine Learning</div>
+        <div class="skill-desc">EfficientNet, TensorFlow, transfer learning — skin lesion & fraud detection models.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🌶️</div>
+        <div class="skill-name">Flask</div>
+        <div class="skill-desc">REST APIs, file uploads, ML model serving and web app backends.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><img src="images/mongo.png" alt="MongoDB" onerror="this.parentElement.innerHTML='🍃'"></div>
+        <div class="skill-name">MongoDB</div>
+        <div class="skill-desc">GridFS file storage, collection design and query optimization.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🐳</div>
+        <div class="skill-name">Docker</div>
+        <div class="skill-desc">Containerizing and deploying apps — including production ML deployments on Render.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><img src="images/figma.png" alt="Figma" onerror="this.parentElement.innerHTML='🎨'"></div>
+        <div class="skill-name">Figma</div>
+        <div class="skill-desc">UI/UX design, wireframing and interactive prototyping.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><img src="images/blender.png" alt="Blender" onerror="this.parentElement.innerHTML='🧊'"></div>
+        <div class="skill-name">Blender</div>
+        <div class="skill-desc">3D modelling, rendering and animation for creative projects.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><img src="images/c.png" alt="C" onerror="this.parentElement.innerHTML='⚙️'"></div>
+        <div class="skill-name">C</div>
+        <div class="skill-desc">Systems programming, memory management and low-level logic.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><img src="images/lua.png" alt="Lua" onerror="this.parentElement.innerHTML='🌙'"></div>
+        <div class="skill-name">Lua</div>
+        <div class="skill-desc">Scripting, game logic and embedded automation.</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🗄️</div>
+        <div class="skill-name">SQL</div>
+        <div class="skill-desc">Joins, subqueries, indexing and relational schema design.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-dots reveal reveal-delay-2" id="carouselDots"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <div class="reveal">
+    <div class="section-eyebrow">projects</div>
+    <h2 class="section-title">Things I've built.</h2>
+  </div>
+  <div class="projects-grid">
+    <!-- Featured -->
+    <div class="project-card reveal">
+      <div>
+        <div class="project-num">01 / FEATURED</div>
+        <h3 class="project-title">DFU Classifier</h3>
+        <p class="project-desc">
+          End-to-end web app for Diabetic Foot Ulcer detection using EfficientNetB3 and TensorFlow.
+          Two-stage transfer learning, a Flask REST API, Docker deployment on Render and a hybrid
+          clinical rule engine for ischemia scoring.
+        </p>
+        <div class="project-tags">
+          <span class="tag">EfficientNetB3</span>
+          <span class="tag">TensorFlow</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Render</span>
+        </div>
+        <a class="project-link" href="https://github.com/PavanSai008" target="_blank">
+          View on GitHub &nbsp;→
+        </a>
+      </div>
+      <div class="project-visual">
+        <div class="visual-icon">🧠</div>
+      </div>
+    </div>
+    <!-- Card 2 -->
+    <div class="project-card reveal reveal-delay-1">
+      <div class="project-num">02</div>
+      <h3 class="project-title">StudiMate</h3>
+      <p class="project-desc">
+        AI-powered learning planner that generates personalised study schedules, tracks progress
+        and adapts to the user's pace and weak areas.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Python</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">MongoDB</span>
+      </div>
+      <a class="project-link" href="https://github.com/PavanSai008" target="_blank">View on GitHub →</a>
+    </div>
+    <!-- Card 3 -->
+    <div class="project-card reveal reveal-delay-2">
+      <div class="project-num">03</div>
+      <h3 class="project-title">Document Verification Portal</h3>
+      <p class="project-desc">
+        Production backend portal built during internship at RINL Visakhapatnam. Agile team
+        project handling document upload, verification workflow and audit trails.
+      </p>
+      <div class="project-tags">
+        <span class="tag">Backend</span>
+        <span class="tag">REST API</span>
+        <span class="tag">Agile</span>
+        <span class="tag">MongoDB</span>
+      </div>
+      <span class="project-link" style="color:var(--muted); cursor:default;">Industry Project</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── EXPERIENCE ── -->
+<section id="experience">
+  <div class="reveal">
+    <div class="section-eyebrow">experience</div>
+    <h2 class="section-title">Where I've worked.</h2>
+  </div>
+  <div class="timeline reveal reveal-delay-1">
+    <div class="timeline-item">
+      <div class="timeline-date">2024</div>
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-company">RINL · VISAKHAPATNAM</div>
+        <div class="timeline-role">Backend Developer Intern</div>
+        <div class="timeline-desc">
+          Built a document verification portal in an Agile team. Handled file upload pipelines,
+          verification workflows and backend REST APIs for a production-grade internal system.
+        </div>
+        <div class="timeline-tech">
+          <span class="tag">Python</span>
+          <span class="tag">REST API</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Agile</span>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">2024</div>
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-company">OCTANET</div>
+        <div class="timeline-role">Backend Developer Intern</div>
+        <div class="timeline-desc">
+          Backend development role focused on API design, database operations and
+          server-side logic for web applications.
+        </div>
+        <div class="timeline-tech">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">MongoDB</span>
+        </div>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">2022–2026</div>
+      <div class="timeline-dot"></div>
+      <div>
+        <div class="timeline-company">ACHARYA NAGARJUNA UNIVERSITY</div>
+        <div class="timeline-role">B.Tech Computer Science · CGPA 8.1</div>
+        <div class="timeline-desc">
+          Final-year student with focus on full-stack development, machine learning and systems programming.
+          160+ LeetCode problems, deep interest in DSA and system design.
+        </div>
+        <div class="timeline-tech">
+          <span class="tag">DSA</span>
+          <span class="tag">OS</span>
+          <span class="tag">Networks</span>
+          <span class="tag">DBMS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── CERTIFICATIONS ── -->
+<section id="certifications">
+  <div class="reveal">
+    
+    <h2 class="section-title">Certifications.</h2>
+  </div>
+  <div class="cert-grid reveal reveal-delay-1">
+    <div class="cert-card" onclick="openLightbox('certifications/sc.jpg')">
+      <img src="certifications/sc.jpg" alt="Certification 1" onerror="this.src='https://via.placeholder.com/400x300/111118/7b61ff?text=Cert+1'">
+      <div class="cert-overlay">VIEW ↗</div>
+    </div>
+    <div class="cert-card" onclick="openLightbox('certifications/iot.jpg')">
+      <img src="certifications/iot.jpg" alt="Certification 1" onerror="this.src='https://via.placeholder.com/400x300/111118/7b61ff?text=Cert+1'">
+      <div class="cert-overlay">VIEW ↗</div>
+    </div>
+    <div class="cert-card" onclick="openLightbox('certifications/de.jpg')">
+      <img src="certifications/de.jpg" alt="Certification 1" onerror="this.src='https://via.placeholder.com/400x300/111118/7b61ff?text=Cert+1'">
+      <div class="cert-overlay">VIEW ↗</div>
+    </div>
+    <div class="cert-card" onclick="openLightbox('certifications/re.jpg')">
+      <img src="certifications/re.jpg" alt="Certification 1" onerror="this.src='https://via.placeholder.com/400x300/111118/7b61ff?text=Cert+1'">
+      <div class="cert-overlay">VIEW ↗</div>
+    </div>
+    <div class="cert-card" onclick="openLightbox('certifications/in.jpg')">
+      <img src="certifications/in.jpg" alt="Certification 1" onerror="this.src='https://via.placeholder.com/400x300/111118/7b61ff?text=Cert+1'">
+      <div class="cert-overlay">VIEW ↗</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="contact-grid">
+    <div class="contact-text reveal">
+      <div class="section-eyebrow">contact</div>
+      <h2 class="section-title" style="margin-bottom:24px;">Let's talk.</h2>
+      <p>
+        I'm actively looking for fresher/entry-level software engineering roles.
+        If you have an opportunity, a project idea, or just want to connect — I'm all ears.
+      </p>
+      <div class="contact-links">
+        <a class="contact-link" href="https://in.linkedin.com/in/pavan-sai-dummida-5a5695290" target="_blank">
+          <i class="fab fa-linkedin-in"></i> linkedin.com/in/pavan-sai-dummida
+        </a>
+        <a class="contact-link" href="https://github.com/PavanSai008" target="_blank">
+          <i class="fab fa-github"></i> github.com/PavanSai008
+        </a>
+        <a class="contact-link" href="https://www.instagram.com/pavansai14/" target="_blank">
+          <i class="fab fa-instagram"></i> @pavansai14
+        </a>
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1">
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Ravi">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Kumar">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="ravi@company.com">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Hey Pavan, I'd love to connect about..."></textarea>
+        </div>
+        <div class="form-submit">
+          <button class="btn-primary" type="button">Send Message &nbsp;→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <span>© 2026 Pavan Sai Dummida</span>
+  <span>Built with HTML · CSS · JS</span>
+</footer>
+
+<!-- ── LIGHTBOX ── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightboxImg" src="" alt="Certificate">
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
