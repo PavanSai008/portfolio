@@ -753,7 +753,7 @@ nav .nav-label-full { display: inline; }
   .btn-primary{ margin-left:75px; }
 
   #hero { padding: 100px 24px 80px; }
-  .hero-stats { right: 24px; bottom: 40px; }
+  .hero-stats { right: 24px; bottom: 550px; }
   .hero-name { margin-top:400px }
 
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
