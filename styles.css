@@ -364,12 +364,15 @@ section { padding: 120px 48px; }
 .skill-card.active .skill-desc { max-height: 80px; opacity: 1; }
 
 .carousel-controls {
-  display: flex; justify-content: center; gap: 6px;
+  display: flex; justify-content: center; gap: 0px;
   margin-top: 40px;
+  margin-right: 0cm;
 }
-.carousel-btn {
-  width: 48px; height: 48px;
+.carousel-btn-l {
+  width: 45px; height: 45px;
   border-radius: 50%;
+  border-top-left-radius: 0%;
+  border-bottom-left-radius: 0%;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
@@ -377,8 +380,24 @@ section { padding: 120px 48px; }
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
   transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  border-left: none;
 }
-.carousel-btn:hover { background: var(--accent); border-color: var(--accent); transform: scale(1.05); }
+.carousel-btn-r {
+  width: 45px; height: 45px;
+  border-radius: 50%;
+  border-top-right-radius: 0%;
+  border-bottom-right-radius: 0%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  border-right: none;
+}
+.carousel-btn-l:hover { background: var(--accent); border-color: var(--accent); transform: scale(1.05); }
+.carousel-btn-r:hover { background: var(--accent); border-color: var(--accent); transform: scale(1.05); }
 
 /* dot indicators */
 .carousel-dots {
