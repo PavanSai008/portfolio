@@ -116,6 +116,10 @@ export function createAvatarHero(canvas, options = {}) {
     };
   }
 
+  function isDesktop() {
+    return getSize().width >= 1024;
+  }
+
   function initScene() {
     state.scene = new THREE.Scene();
 
@@ -165,19 +169,21 @@ export function createAvatarHero(canvas, options = {}) {
     directional.shadow.bias = -0.0005;
     state.scene.add(directional);
 
-    state.cursorLight = new THREE.PointLight(CONFIG.glowColor, 6, 8, 2);
-    state.cursorLight.position.set(0, 0, 2);
-    state.scene.add(state.cursorLight);
+    if (isDesktop()) {
+      state.cursorLight = new THREE.PointLight(CONFIG.glowColor, 6, 8, 2);
+      state.cursorLight.position.set(0, 0, 2);
+      state.scene.add(state.cursorLight);
 
-    const glowMesh = new THREE.Mesh(
-      new THREE.SphereGeometry(0.05, 16, 16),
-      new THREE.MeshBasicMaterial({
-        color: CONFIG.glowColor,
-        transparent: true,
-        opacity: 0.9,
-      }),
-    );
-    state.cursorLight.add(glowMesh);
+      const glowMesh = new THREE.Mesh(
+        new THREE.SphereGeometry(0.05, 16, 16),
+        new THREE.MeshBasicMaterial({
+          color: CONFIG.glowColor,
+          transparent: true,
+          opacity: 0.9,
+        }),
+      );
+      state.cursorLight.add(glowMesh);
+    }
   }
 
   async function createAvatar() {
@@ -286,13 +292,15 @@ export function createAvatarHero(canvas, options = {}) {
     state.composer = new EffectComposer(state.renderer);
     state.composer.addPass(new RenderPass(state.scene, state.camera));
 
-    const bloomPass = new UnrealBloomPass(
-      size,
-      CONFIG.bloom.strength,
-      CONFIG.bloom.radius,
-      CONFIG.bloom.threshold,
-    );
-    state.composer.addPass(bloomPass);
+    if (isDesktop()) {
+      const bloomPass = new UnrealBloomPass(
+        size,
+        CONFIG.bloom.strength,
+        CONFIG.bloom.radius,
+        CONFIG.bloom.threshold,
+      );
+      state.composer.addPass(bloomPass);
+    }
 
     const grainShader = {
       uniforms: {
@@ -464,7 +472,7 @@ export function createAvatarHero(canvas, options = {}) {
   }
 
   function updateCursorLight(delta) {
-    if (!state.cursorLight) return;
+    if (!isDesktop() || !state.cursorLight) return;
     const t = 1 - Math.pow(0.0001, delta);
     state.currentLightPos.lerp(state.targetLightPos, t);
     state.cursorLight.position.copy(state.currentLightPos);
