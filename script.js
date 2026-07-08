@@ -1,3 +1,5 @@
+import { createAvatarHero } from "./avatar-widget.js";
+
 /* ═══════════════════════════════════════════
    CAROUSEL
 ═══════════════════════════════════════════ */
@@ -203,6 +205,17 @@ function sendMessage() {
   );
 
   window.location.href = `mailto:dummidapavan@gmail.com?subject=${subject}&body=${body}`;
+}
+
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
+window.sendMessage = sendMessage;
+
+const heroCanvas = document.getElementById("avatar-canvas");
+if (heroCanvas) {
+  window.avatarHero = createAvatarHero(heroCanvas, {
+    avatarUrl: "imgs/Avatar.png", // use the actual avatar file path in imgs/
+  });
 }
 
 /* ═══════════════════════════════════════════
