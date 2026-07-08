@@ -13,12 +13,12 @@
   --font-display: 'Syne', sans-serif;
   --font-mono:    'DM Mono', monospace;
   --font-body:    'DM Sans', sans-serif;
-  --font-section: 'Fornire Light', var(--font-display), sans-serif;
+  --font-section: 'Brigold-DEMO', var(--font-display), sans-serif;
 }
 
 @font-face {
-  font-family: 'Fornire Light';
-  src: url('Fornire-Light.otf') format('opentype');
+  font-family: 'Brigold-DEMO';
+  src: url('Brigold-DEMO.otf') format('opentype');
   font-weight: 300 800;
   font-style: normal;
   font-display: swap;
@@ -101,16 +101,6 @@ nav a:hover { color: var(--text); }
   overflow: hidden;
 }
 
-/* big blurred blobs */
-.hero-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.15;
-  pointer-events: none;
-}
-.blob1 { width: 600px; height: 600px; background: var(--accent);  top: -100px; right: -100px; }
-.blob2 { width: 400px; height: 400px; background: var(--accent2); bottom: 0;   left: -80px; }
 
 /* Avatar hero background: fills the whole #hero section, sits behind the text */
 .hero-avatar-container {
@@ -130,105 +120,31 @@ nav a:hover { color: var(--text); }
 
 /* Everything else in the hero needs to sit above the avatar background */
 #hero > .hero-name,
-#hero > .hero-sub,
-#hero > .hero-cta,
-#hero > .scroll-hint,
 #hero > .hero-stats {
   position: relative;
   z-index: 1;
 }
 
-.hero-tag {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--accent2);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 24px;
-  opacity: 0;
-  animation: fadeUp 0.6s 0.2s forwards;
-}
 .hero-name {
   font-family: var(--font-section);
   font-size: clamp(3.5rem, 9vw, 8rem);
   font-weight: 800;
   line-height: 0.95;
   letter-spacing: -3px;
-  margin-bottom: 32px;
   opacity: 0;
   animation: fadeUp 0.6s 0.4s forwards;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  margin-top: 20px;
 }
 .hero-name .line { display: block; }
 .hero-name .accent { color: var(--accent); }
 
-.hero-sub {
-  font-size: 1.1rem;
-  color: var(--muted);
-  max-width: 480px;
-  margin-bottom: 48px;
-  opacity: 0;
-  animation: fadeUp 0.6s 0.6s forwards;
-  font-weight: 300;
-}
-.hero-sub strong { color: var(--text); font-weight: 500; }
-
-.hero-cta {
-  display: flex; gap: 16px; flex-wrap: wrap;
-  position: relative;
-  z-index: 2;
-  opacity: 0;
-  animation: fadeUp 0.6s 0.8s forwards;
-}
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: var(--accent);
-  color: #fff;
-  padding: 14px 32px;
-  border-radius: 8px;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 0.3px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  border: none; cursor: pointer;
-}
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(123,97,255,0.4);
-}
-.btn-ghost {
-  display: inline-flex; align-items: center; gap: 8px;
-  background: transparent;
-  color: var(--text);
-  padding: 14px 32px;
-  border-radius: 8px;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.9rem;
-  border: 1px solid var(--border);
-  transition: border-color 0.2s, background 0.2s;
-  cursor: pointer;
-}
-.btn-ghost:hover { border-color: var(--accent); background: rgba(123,97,255,0.08); }
-
-/* scroll indicator */
-.scroll-hint {
-  position: absolute; bottom: 40px; left: 48px;
-  display: flex; align-items: center; gap: 12px;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--muted);
-  opacity: 0;
-  animation: fadeUp 0.6s 1.2s forwards;
-}
-.scroll-line {
-  width: 40px; height: 1px;
-  background: var(--muted);
-}
-
 /* hero stats */
 .hero-stats {
-  position: absolute; right: 48px; bottom: 60px;
+  position: absolute; right: 48px; bottom: 75px;
   display: flex; flex-direction: column; gap: 24px;
   opacity: 0;
   animation: fadeUp 0.6s 1s forwards;
